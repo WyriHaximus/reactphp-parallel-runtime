@@ -10,9 +10,6 @@ use function React\Promise\resolve;
 
 final class Runtime
 {
-    /** @var string */
-    private $id;
-
     /** @var ParallelRuntime */
     private $runtime;
 
@@ -22,7 +19,6 @@ final class Runtime
     public function __construct(FutureToPromiseConverter $futureToPromiseConverter, string $autoload)
     {
         $this->runtime = new ParallelRuntime($autoload);
-        $this->id = \spl_object_hash($this->runtime);
         $this->futureToPromiseConverter = $futureToPromiseConverter;
     }
 
