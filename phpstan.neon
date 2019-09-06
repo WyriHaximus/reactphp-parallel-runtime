@@ -1,6 +1,9 @@
 parameters:
 	ignoreErrors:
 		- '#Do not throw the \\Exception base class. Instead, extend the \\Exception base class. More info: http:\/\/bit.ly\/subtypeexception#'
+		- '#Invalid type Throwable|null to throw.#'
+		- '#Thrown exceptions in a catch block must bundle the previous exception \(see throw statement line 88\). More info: http:\/\/bit.ly\/bundleexception#'
+		- '#Thrown exceptions in a catch block must bundle the previous exception \(see throw statement line 114\). More info: http:\/\/bit.ly\/bundleexception#'
 
 includes:
 	- vendor/wyrihaximus/async-test-utilities/rules.neon
