@@ -3,6 +3,7 @@
 namespace WyriHaximus\React\Tests\Parallel;
 
 use React\EventLoop\Factory;
+use React\Promise\ExtendedPromiseInterface;
 use WyriHaximus\AsyncTestUtilities\AsyncTestCase;
 use WyriHaximus\React\Parallel\FutureToPromiseConverter;
 use WyriHaximus\React\Parallel\Runtime;
@@ -18,10 +19,15 @@ final class RuntimeTest extends AsyncTestCase
         $loop = Factory::create();
         $runtime = new Runtime(new FutureToPromiseConverter($loop), \dirname(__DIR__) . '/vendor/autoload.php');
 
+        /** @var ExtendedPromiseInterface $promise */
         $promise = $runtime->run(function () {
             sleep(3);
 
             return 3;
+        });
+
+        $promise->always(function () use ($runtime): void {
+            $runtime->close();
         });
 
         $loop->run();
@@ -38,10 +44,15 @@ final class RuntimeTest extends AsyncTestCase
         $loop = Factory::create();
         $runtime = new Runtime(new FutureToPromiseConverter($loop), \dirname(__DIR__) . '/vendor/autoload.php');
 
+        /** @var ExtendedPromiseInterface $promise */
         $promise = $runtime->run(function (): void {
             sleep(3);
 
             throw new \Exception('Rethrow exception');
+        });
+
+        $promise->always(function () use ($runtime): void {
+            $runtime->close();
         });
 
         $loop->run();
