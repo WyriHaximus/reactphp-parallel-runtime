@@ -1,7 +1,6 @@
 # ReactPHP Runtime wrapper for ext-parallel
 
 [![Linux Build Status](https://travis-ci.org/WyriHaximus/reactphp-parallel-runtime.png)](https://travis-ci.org/WyriHaximus/reactphp-parallel-runtime)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/1sfdh9g2pvbuw4pp?svg=true)](https://ci.appveyor.com/project/WyriHaximus/reactphp-parallel-runtime)
 [![Latest Stable Version](https://poser.pugx.org/WyriHaximus/react-parallel-runtime/v/stable.png)](https://packagist.org/packages/WyriHaximus/react-parallel-runtime)
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/react-parallel-runtime/downloads.png)](https://packagist.org/packages/WyriHaximus/react-parallel-runtime)
 [![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-parallel-runtime/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/reactphp-parallel-runtime/?branch=master)
