@@ -24,10 +24,10 @@ final class Runtime
 
     /**
      * @param  Closure           $callable
-     * @param  array<int, mixed> $args
+     * @param  mixed[] $args
      * @return PromiseInterface
      */
-    public function run(Closure $callable, ...$args): PromiseInterface
+    public function run(Closure $callable, array $args = []): PromiseInterface
     {
         $future = $this->runtime->run($callable, $args);
 

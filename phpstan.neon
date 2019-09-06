@@ -1,7 +1,6 @@
 parameters:
 	ignoreErrors:
 		- '#Do not throw the \\Exception base class. Instead, extend the \\Exception base class. More info: http:\/\/bit.ly\/subtypeexception#'
-		- '#In method "WyriHaximus\\React\\Parallel\\Runtime::run", parameter \$args can be type-hinted to "array". More info: http:\/\/bit.ly\/usetypehint#'
 
 includes:
 	- vendor/wyrihaximus/async-test-utilities/rules.neon
